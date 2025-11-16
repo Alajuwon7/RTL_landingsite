@@ -1,4 +1,4 @@
-# Rush The Line — Landing Experience
+# RTL_landingsite — Rush The Line Landing Experience
 
 A high-energy, AI-forward landing page for **Rush The Line**, built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and Framer Motion. The site follows the Rush design system: bold gradients, glassmorphism, speed-inspired motion, and human + AI storytelling.
 
@@ -60,7 +60,7 @@ npm run lint    # Run ESLint
 - Supply final brand imagery for hero and timeline accents (current visuals are CSS-based mockups)
 
 ## 📦 Deployment
-- Vercel-ready. Update `next.config.ts` or environment variables as needed, then `npm run build` and deploy via Vercel CLI or dashboard.
+- Vercel-ready. Update `next.config.ts` or environment variables as needed, then `npm run build` and deploy via Vercel CLI or dashboard (Netlify and Vercel both supported).
 
 ---
 Created with care to showcase the Rush The Line movement: **human + AI guidance for fearless airport navigation**.💫
