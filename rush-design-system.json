@@ -1,0 +1,607 @@
+{
+  "designSystem": {
+    "name": "Rush The Line Design System",
+    "version": "1.0.0",
+    "description": "Modern, high-energy design system featuring bold gradients, speed-inspired motion, and dynamic visual elements",
+    "designPrinciples": {
+      "visual": [
+        "Bold, high-contrast color palette with gradient accents",
+        "Speed and motion conveyed through horizontal lines and directional elements",
+        "Dark backgrounds with vibrant accent colors for energy and focus",
+        "Generous use of blur effects, glows, and gradient overlays for depth",
+        "Rounded corners throughout for modern, friendly appearance"
+      ],
+      "interaction": [
+        "Hover states feature glow effects and subtle scale transforms",
+        "CTAs are prominent with gradient fills and luminous effects",
+        "Progressive disclosure through cards and sections",
+        "Smooth transitions and animations emphasize speed concept"
+      ],
+      "hierarchy": [
+        "Large hero typography with gradient text effects",
+        "Clear sectional separation with spacing and backgrounds",
+        "Visual weight through size, color intensity, and effects",
+        "Strategic use of white space to prevent overwhelming density"
+      ]
+    },
+    "colorSystem": {
+      "palette": {
+        "neutral": {
+          "background": {
+            "primary": "#272830",
+            "secondary": "#1a1b23",
+            "elevated": "#2f3038",
+            "description": "Deep charcoal base for maximum contrast with bright accents"
+          },
+          "surface": {
+            "card": "rgba(255, 255, 255, 0.05)",
+            "cardHover": "rgba(255, 255, 255, 0.08)",
+            "overlay": "rgba(0, 0, 0, 0.4)",
+            "description": "Subtle surfaces with transparency for depth"
+          },
+          "text": {
+            "primary": "#FFFFFF",
+            "secondary": "rgba(255, 255, 255, 0.7)",
+            "tertiary": "rgba(255, 255, 255, 0.5)",
+            "description": "White-based text hierarchy with opacity variations"
+          }
+        },
+        "brand": {
+          "magenta": {
+            "base": "#A61470",
+            "light": "#C61B8E",
+            "dark": "#8A1160",
+            "description": "Primary brand color, vibrant and energetic"
+          },
+          "red": {
+            "base": "#E2021A",
+            "light": "#FF1A33",
+            "dark": "#B80115",
+            "description": "Secondary brand color, bold and attention-grabbing"
+          },
+          "purple": {
+            "base": "#7B2CBF",
+            "light": "#9D4EDD",
+            "dark": "#5A189A",
+            "description": "Supporting color for depth and variation"
+          }
+        },
+        "semantic": {
+          "success": "#10B981",
+          "warning": "#F59E0B",
+          "error": "#EF4444",
+          "info": "#3B82F6"
+        }
+      },
+      "gradients": {
+        "primary": {
+          "value": "linear-gradient(90deg, #A61470 0%, #E2021A 100%)",
+          "usage": "Logo, primary CTAs, hero headlines, accent elements",
+          "angle": "90deg (left to right for speed/motion effect)"
+        },
+        "primaryVertical": {
+          "value": "linear-gradient(180deg, #A61470 0%, #E2021A 100%)",
+          "usage": "Vertical elements, dividers, progress indicators"
+        },
+        "heroBackground": {
+          "value": "radial-gradient(circle at 50% 20%, rgba(166, 20, 112, 0.15) 0%, rgba(39, 40, 48, 1) 60%)",
+          "usage": "Large background areas, hero sections for atmospheric depth"
+        },
+        "cardGlow": {
+          "value": "radial-gradient(circle at 50% 0%, rgba(166, 20, 112, 0.2) 0%, transparent 70%)",
+          "usage": "Top glow effect on cards and elevated surfaces"
+        },
+        "subtle": {
+          "value": "linear-gradient(135deg, rgba(166, 20, 112, 0.1) 0%, rgba(226, 2, 26, 0.1) 100%)",
+          "usage": "Subtle backgrounds, secondary surfaces"
+        }
+      }
+    },
+    "typography": {
+      "fontFamilies": {
+        "primary": {
+          "value": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+          "usage": "Body text, UI elements, general content"
+        },
+        "display": {
+          "value": "'Inter', system-ui, -apple-system, sans-serif",
+          "usage": "Headlines, hero text, marketing copy",
+          "weight": "700-900 (Bold to Black)",
+          "fallback": "Use extremely bold system fonts if Inter unavailable"
+        },
+        "mono": {
+          "value": "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
+          "usage": "Code snippets, technical data, monospace elements"
+        }
+      },
+      "scale": {
+        "hero": {
+          "size": "clamp(3rem, 8vw, 6rem)",
+          "lineHeight": "1.1",
+          "fontWeight": "800",
+          "letterSpacing": "-0.02em",
+          "usage": "Primary hero headlines",
+          "gradientText": true
+        },
+        "h1": {
+          "size": "clamp(2rem, 5vw, 3.5rem)",
+          "lineHeight": "1.2",
+          "fontWeight": "700",
+          "letterSpacing": "-0.015em",
+          "usage": "Section headers, page titles"
+        },
+        "h2": {
+          "size": "clamp(1.5rem, 3.5vw, 2.5rem)",
+          "lineHeight": "1.3",
+          "fontWeight": "700",
+          "letterSpacing": "-0.01em",
+          "usage": "Subsection headers, card titles"
+        },
+        "h3": {
+          "size": "clamp(1.25rem, 2.5vw, 1.875rem)",
+          "lineHeight": "1.4",
+          "fontWeight": "600",
+          "letterSpacing": "0",
+          "usage": "Component headers, smaller sections"
+        },
+        "body-large": {
+          "size": "1.125rem",
+          "lineHeight": "1.6",
+          "fontWeight": "400",
+          "usage": "Lead paragraphs, important body text"
+        },
+        "body": {
+          "size": "1rem",
+          "lineHeight": "1.6",
+          "fontWeight": "400",
+          "usage": "Standard body text, descriptions"
+        },
+        "body-small": {
+          "size": "0.875rem",
+          "lineHeight": "1.5",
+          "fontWeight": "400",
+          "usage": "Secondary text, captions, metadata"
+        },
+        "label": {
+          "size": "0.75rem",
+          "lineHeight": "1.4",
+          "fontWeight": "600",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase",
+          "usage": "Form labels, tags, badges, small headers"
+        }
+      },
+      "treatments": {
+        "gradientText": {
+          "background": "linear-gradient(90deg, #A61470 0%, #E2021A 100%)",
+          "backgroundClip": "text",
+          "WebkitBackgroundClip": "text",
+          "WebkitTextFillColor": "transparent",
+          "usage": "Hero headlines, key phrases, brand emphasis"
+        },
+        "glowText": {
+          "textShadow": "0 0 20px rgba(166, 20, 112, 0.5), 0 0 40px rgba(226, 2, 26, 0.3)",
+          "usage": "High emphasis text, hover states on headings"
+        }
+      }
+    },
+    "spacing": {
+      "scale": {
+        "xs": "0.25rem",
+        "sm": "0.5rem",
+        "md": "1rem",
+        "lg": "1.5rem",
+        "xl": "2rem",
+        "2xl": "3rem",
+        "3xl": "4rem",
+        "4xl": "6rem",
+        "5xl": "8rem",
+        "6xl": "12rem"
+      },
+      "sections": {
+        "hero": {
+          "paddingY": "clamp(4rem, 12vh, 8rem)",
+          "paddingX": "clamp(1rem, 5vw, 2rem)"
+        },
+        "standard": {
+          "paddingY": "clamp(3rem, 8vh, 6rem)",
+          "paddingX": "clamp(1rem, 5vw, 2rem)"
+        },
+        "compact": {
+          "paddingY": "clamp(2rem, 5vh, 4rem)",
+          "paddingX": "clamp(1rem, 5vw, 2rem)"
+        }
+      },
+      "container": {
+        "maxWidth": "1280px",
+        "padding": "0 clamp(1rem, 5vw, 2rem)"
+      }
+    },
+    "borderRadius": {
+      "none": "0",
+      "sm": "0.375rem",
+      "md": "0.5rem",
+      "lg": "0.75rem",
+      "xl": "1rem",
+      "2xl": "1.5rem",
+      "full": "9999px",
+      "usage": {
+        "buttons": "xl or full",
+        "cards": "xl or 2xl",
+        "inputs": "lg",
+        "badges": "full",
+        "images": "lg"
+      }
+    },
+    "shadows": {
+      "sm": "0 1px 2px rgba(0, 0, 0, 0.3)",
+      "md": "0 4px 6px rgba(0, 0, 0, 0.4)",
+      "lg": "0 10px 15px rgba(0, 0, 0, 0.5)",
+      "xl": "0 20px 25px rgba(0, 0, 0, 0.6)",
+      "glow-magenta": "0 0 20px rgba(166, 20, 112, 0.4), 0 0 40px rgba(166, 20, 112, 0.2)",
+      "glow-red": "0 0 20px rgba(226, 2, 26, 0.4), 0 0 40px rgba(226, 2, 26, 0.2)",
+      "glow-gradient": "0 0 30px rgba(166, 20, 112, 0.3), 0 0 60px rgba(226, 2, 26, 0.2)",
+      "usage": {
+        "cards": "md",
+        "cardsHover": "xl + glow-gradient",
+        "buttons": "glow-magenta on hover",
+        "elevated": "lg"
+      }
+    },
+    "effects": {
+      "blur": {
+        "sm": "blur(4px)",
+        "md": "blur(8px)",
+        "lg": "blur(16px)",
+        "xl": "blur(24px)",
+        "usage": "Glassmorphism effects, background overlays, depth layers"
+      },
+      "backdropBlur": {
+        "sm": "4px",
+        "md": "8px",
+        "lg": "12px",
+        "usage": "Glass cards, navigation overlays, modals"
+      }
+    },
+    "components": {
+      "button": {
+        "variants": {
+          "primary": {
+            "background": "linear-gradient(90deg, #A61470 0%, #E2021A 100%)",
+            "color": "#FFFFFF",
+            "padding": "0.875rem 2rem",
+            "borderRadius": "9999px",
+            "fontWeight": "600",
+            "fontSize": "1rem",
+            "border": "none",
+            "cursor": "pointer",
+            "transition": "all 0.3s ease",
+            "hover": {
+              "transform": "translateY(-2px) scale(1.02)",
+              "boxShadow": "0 0 30px rgba(166, 20, 112, 0.5), 0 0 60px rgba(226, 2, 26, 0.3)",
+              "filter": "brightness(1.1)"
+            },
+            "active": {
+              "transform": "translateY(0) scale(0.98)"
+            }
+          },
+          "secondary": {
+            "background": "rgba(255, 255, 255, 0.1)",
+            "color": "#FFFFFF",
+            "padding": "0.875rem 2rem",
+            "borderRadius": "9999px",
+            "fontWeight": "600",
+            "fontSize": "1rem",
+            "border": "1px solid rgba(255, 255, 255, 0.2)",
+            "backdropFilter": "blur(8px)",
+            "cursor": "pointer",
+            "transition": "all 0.3s ease",
+            "hover": {
+              "background": "rgba(255, 255, 255, 0.15)",
+              "borderColor": "rgba(166, 20, 112, 0.5)",
+              "boxShadow": "0 0 20px rgba(166, 20, 112, 0.3)"
+            }
+          },
+          "ghost": {
+            "background": "transparent",
+            "color": "#FFFFFF",
+            "padding": "0.875rem 2rem",
+            "borderRadius": "9999px",
+            "fontWeight": "600",
+            "fontSize": "1rem",
+            "border": "1px solid rgba(255, 255, 255, 0.3)",
+            "cursor": "pointer",
+            "transition": "all 0.3s ease",
+            "hover": {
+              "background": "rgba(166, 20, 112, 0.1)",
+              "borderColor": "#A61470"
+            }
+          }
+        },
+        "sizes": {
+          "small": {
+            "padding": "0.5rem 1.25rem",
+            "fontSize": "0.875rem"
+          },
+          "medium": {
+            "padding": "0.875rem 2rem",
+            "fontSize": "1rem"
+          },
+          "large": {
+            "padding": "1rem 2.5rem",
+            "fontSize": "1.125rem"
+          }
+        }
+      },
+      "card": {
+        "base": {
+          "background": "rgba(255, 255, 255, 0.05)",
+          "backdropFilter": "blur(8px)",
+          "borderRadius": "1.5rem",
+          "border": "1px solid rgba(255, 255, 255, 0.1)",
+          "padding": "2rem",
+          "transition": "all 0.3s ease"
+        },
+        "elevated": {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "backdropFilter": "blur(12px)",
+          "borderRadius": "1.5rem",
+          "border": "1px solid rgba(255, 255, 255, 0.15)",
+          "padding": "2rem",
+          "boxShadow": "0 10px 15px rgba(0, 0, 0, 0.5)",
+          "position": "relative",
+          "overflow": "hidden",
+          "before": {
+            "content": "''",
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "right": "0",
+            "height": "1px",
+            "background": "linear-gradient(90deg, transparent, rgba(166, 20, 112, 0.5), transparent)"
+          }
+        },
+        "hover": {
+          "transform": "translateY(-4px)",
+          "boxShadow": "0 20px 25px rgba(0, 0, 0, 0.6), 0 0 30px rgba(166, 20, 112, 0.2)",
+          "borderColor": "rgba(166, 20, 112, 0.3)"
+        },
+        "glowTop": {
+          "position": "relative",
+          "before": {
+            "content": "''",
+            "position": "absolute",
+            "top": "-50%",
+            "left": "50%",
+            "transform": "translateX(-50%)",
+            "width": "200%",
+            "height": "100%",
+            "background": "radial-gradient(circle, rgba(166, 20, 112, 0.3) 0%, transparent 70%)",
+            "pointerEvents": "none"
+          }
+        }
+      },
+      "input": {
+        "base": {
+          "background": "rgba(255, 255, 255, 0.05)",
+          "border": "1px solid rgba(255, 255, 255, 0.2)",
+          "borderRadius": "0.75rem",
+          "padding": "0.875rem 1rem",
+          "color": "#FFFFFF",
+          "fontSize": "1rem",
+          "transition": "all 0.3s ease",
+          "focus": {
+            "outline": "none",
+            "borderColor": "#A61470",
+            "boxShadow": "0 0 0 3px rgba(166, 20, 112, 0.2)",
+            "background": "rgba(255, 255, 255, 0.08)"
+          },
+          "placeholder": {
+            "color": "rgba(255, 255, 255, 0.5)"
+          }
+        }
+      },
+      "badge": {
+        "base": {
+          "display": "inline-flex",
+          "alignItems": "center",
+          "padding": "0.375rem 0.875rem",
+          "borderRadius": "9999px",
+          "fontSize": "0.75rem",
+          "fontWeight": "600",
+          "letterSpacing": "0.05em",
+          "textTransform": "uppercase"
+        },
+        "variants": {
+          "gradient": {
+            "background": "linear-gradient(90deg, #A61470 0%, #E2021A 100%)",
+            "color": "#FFFFFF"
+          },
+          "outline": {
+            "background": "transparent",
+            "border": "1px solid #A61470",
+            "color": "#A61470"
+          },
+          "subtle": {
+            "background": "rgba(166, 20, 112, 0.15)",
+            "color": "#C61B8E"
+          }
+        }
+      },
+      "logo": {
+        "speedLines": {
+          "description": "Horizontal rounded bars decreasing in length from left to right to convey motion",
+          "structure": [
+            "Multiple horizontal elements with rounded caps (pill shapes)",
+            "Gradient fill from #A61470 to #E2021A",
+            "Lines arranged in decreasing lengths to suggest forward motion",
+            "Spacing between lines creates rhythm and energy"
+          ],
+          "implementation": {
+            "borderRadius": "9999px (fully rounded ends)",
+            "height": "Variable (creates visual hierarchy)",
+            "widths": "Progressively decrease from left to right",
+            "gradient": "Apply primary gradient (90deg, left to right)"
+          }
+        },
+        "typography": {
+          "letterSpacing": "tight (-0.02em to -0.03em)",
+          "fontWeight": "800-900 (Black weight)",
+          "gradient": "Apply to text using background-clip",
+          "scale": "Bold and large for maximum impact"
+        }
+      },
+      "speedElement": {
+        "description": "Motion lines that appear beside or behind elements to convey speed",
+        "base": {
+          "width": "Variable lengths (shorter = faster perception)",
+          "height": "2-8px",
+          "borderRadius": "9999px",
+          "background": "linear-gradient(90deg, transparent 0%, #A61470 50%, transparent 100%)",
+          "opacity": "0.3-0.6",
+          "animation": "Optional horizontal slide or fade"
+        },
+        "usage": [
+          "Behind CTAs on hover",
+          "Decorative elements in hero sections",
+          "Transition effects between sections",
+          "Loading states"
+        ]
+      }
+    },
+    "layout": {
+      "hero": {
+        "structure": "Full-width section with centered content, background gradient, optional decorative elements",
+        "maxWidth": "800px for text content",
+        "alignment": "center",
+        "spacing": "Large vertical padding (6-8rem)",
+        "background": "Radial gradient from accent color at top to dark base"
+      },
+      "grid": {
+        "columns": {
+          "mobile": "1",
+          "tablet": "2",
+          "desktop": "3-4"
+        },
+        "gap": "1.5rem-2rem",
+        "minWidth": "280px per column"
+      },
+      "flex": {
+        "gap": "1rem-2rem",
+        "responsive": "Stack on mobile, row on desktop"
+      }
+    },
+    "animations": {
+      "transitions": {
+        "fast": "150ms ease",
+        "base": "300ms ease",
+        "slow": "500ms ease",
+        "pageTransition": "400ms cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "keyframes": {
+        "fadeIn": {
+          "from": { "opacity": "0", "transform": "translateY(10px)" },
+          "to": { "opacity": "1", "transform": "translateY(0)" }
+        },
+        "slideInRight": {
+          "from": { "opacity": "0", "transform": "translateX(20px)" },
+          "to": { "opacity": "1", "transform": "translateX(0)" }
+        },
+        "glow": {
+          "0%, 100%": { "boxShadow": "0 0 20px rgba(166, 20, 112, 0.4)" },
+          "50%": { "boxShadow": "0 0 40px rgba(166, 20, 112, 0.6)" }
+        },
+        "speedLine": {
+          "from": { "transform": "translateX(-100%)", "opacity": "0" },
+          "to": { "transform": "translateX(100%)", "opacity": "1" }
+        }
+      },
+      "usage": {
+        "cardEntrance": "fadeIn 0.6s ease",
+        "buttonHover": "all 0.3s ease",
+        "pageLoad": "Elements stagger with fadeIn",
+        "ctaPulse": "glow 2s ease-in-out infinite"
+      }
+    },
+    "responsiveBreakpoints": {
+      "xs": "320px",
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    },
+    "accessibilityGuidelines": {
+      "colorContrast": {
+        "textOnDark": "Ensure white text has sufficient contrast against background",
+        "minRatio": "4.5:1 for body text, 3:1 for large text",
+        "gradientText": "Ensure both gradient colors meet contrast requirements"
+      },
+      "focusStates": {
+        "outline": "2px solid #A61470 with 2px offset",
+        "visible": "Always visible for keyboard navigation",
+        "color": "Use brand magenta for consistency"
+      },
+      "motion": {
+        "respectPreference": "Use prefers-reduced-motion media query",
+        "fallback": "Disable animations if user prefers reduced motion"
+      }
+    },
+    "implementationNotes": {
+      "cssVariables": {
+        "usage": "Define all colors, spacing, and common values as CSS custom properties for consistency",
+        "example": {
+          "--color-brand-magenta": "#A61470",
+          "--color-brand-red": "#E2021A",
+          "--gradient-primary": "linear-gradient(90deg, var(--color-brand-magenta), var(--color-brand-red))",
+          "--spacing-section": "clamp(3rem, 8vh, 6rem)",
+          "--border-radius-card": "1.5rem"
+        }
+      },
+      "darkModeOnly": {
+        "note": "This design system is optimized for dark backgrounds only",
+        "warning": "Light mode would require significant color adjustments and is not recommended"
+      },
+      "performance": {
+        "backdrop-filter": "Use sparingly as it can impact performance on lower-end devices",
+        "gradients": "Prefer CSS gradients over images for better performance",
+        "animations": "Use CSS transforms over positional properties for smoother animations"
+      },
+      "browserSupport": {
+        "backdrop-filter": "Provide fallback for browsers that don't support backdrop-filter",
+        "gradient-text": "Provide fallback solid color for -webkit-background-clip",
+        "clamp": "Ensure fallback for older browsers that don't support clamp()"
+      }
+    },
+    "semanticTokens": {
+      "cta": {
+        "primary": {
+          "background": "$gradient-primary",
+          "hover": "$glow-magenta",
+          "text": "$text-primary"
+        }
+      },
+      "surface": {
+        "base": "$background-primary",
+        "elevated": "$surface-card",
+        "interactive": "$surface-cardHover"
+      },
+      "border": {
+        "subtle": "rgba(255, 255, 255, 0.1)",
+        "medium": "rgba(255, 255, 255, 0.2)",
+        "strong": "rgba(255, 255, 255, 0.3)",
+        "accent": "$brand-magenta"
+      }
+    },
+    "usageExamples": {
+      "heroSection": {
+        "html": "<section class='hero'><div class='hero-content'><h1 class='hero-title gradient-text'>Your Headline</h1><p class='hero-subtitle'>Supporting text</p><button class='btn-primary'>Get Started</button></div></section>",
+        "css": ".hero { background: radial-gradient(circle at 50% 20%, rgba(166, 20, 112, 0.15), #272830); padding: clamp(4rem, 12vh, 8rem) clamp(1rem, 5vw, 2rem); } .gradient-text { background: linear-gradient(90deg, #A61470, #E2021A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }"
+      },
+      "glowCard": {
+        "html": "<div class='card elevated'><h3>Card Title</h3><p>Card content</p></div>",
+        "css": ".card.elevated { background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.3s ease; } .card.elevated:hover { transform: translateY(-4px); box-shadow: 0 20px 25px rgba(0,0,0,0.6), 0 0 30px rgba(166,20,112,0.2); }"
+      }
+    }
+  }
+}

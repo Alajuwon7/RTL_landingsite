@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Rush The Line — Landing Experience
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A high-energy, AI-forward landing page for **Rush The Line**, built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and Framer Motion. The site follows the Rush design system: bold gradients, glassmorphism, speed-inspired motion, and human + AI storytelling.
 
-## Available Scripts
+## 🚀 Tech Stack
+- **Framework**: Next.js 14 (App Router) + TypeScript
+- **Styling**: Tailwind CSS 4, custom CSS variables, glassmorphism utilities
+- **Animation**: Framer Motion for scroll reveal, transitions, and interactive timelines
+- **Icons**: lucide-react
+- **Utilities**: clsx, class-variance-authority, tailwind-merge
 
-In the project directory, you can run:
+## 📁 Project Structure
+```
+src/
+  app/
+    layout.tsx        # Metadata, Inter font, skip link
+    page.tsx          # Landing page composition
+    globals.css       # Design system variables & utility classes
+  components/
+    Navigation.tsx    # Sticky nav with mobile drawer
+    Footer.tsx        # Responsive footer + socials
+    shared/           # Button, Card, Section, GradientText helpers
+  sections/
+    Hero.tsx          # Hero with CTAs + live data panel
+    Overview.tsx      # Brand story & value highlights
+    TechGrowth.tsx    # Interactive milestone timeline (Framer Motion)
+    Features.tsx      # Glass card feature grid
+    HowItWorks.tsx    # 3-step traveler flow
+    CTASection.tsx    # Primary waitlist call-to-action
+  lib/
+    design-tokens.ts  # Typed Rush design tokens
+    utils.ts          # cn helper
+rush-design-system.json # Full design system reference
+```
 
-### `npm start`
+## 🧱 Design System
+- Color palette, gradients, spacing, typography, and component guidance live in `rush-design-system.json`.
+- Core CSS variables and utility classes are defined in `src/app/globals.css`.
+- Reusable helpers (buttons, cards, sections) reference these tokens for consistency.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🔧 Scripts
+```bash
+npm run dev     # Start local development server (http://localhost:3000)
+npm run build   # Production build
+npm run start   # Serve production build locally
+npm run lint    # Run ESLint
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ✅ Implementation Highlights
+- Sticky glass navigation with active section tracking & accessible mobile drawer
+- Responsive hero with gradient headline, AI feature badges, and animated data card
+- Overview section with human + AI narrative and iconography
+- **Tech Growth** timeline: tabbed desktop experience + animated mobile timeline powered by Framer Motion
+- Feature grid, traveler workflow, and hero-grade CTA section with hover & scroll animations
+- Accessibility: skip link, focus-visible styles, reduced motion support, semantic HTML
 
-### `npm test`
+## 🧪 Next Steps
+- Connect waitlist CTA to backend or marketing tooling
+- Add analytics (Plausible, GA4, etc.)
+- Supply final brand imagery for hero and timeline accents (current visuals are CSS-based mockups)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Deployment
+- Vercel-ready. Update `next.config.ts` or environment variables as needed, then `npm run build` and deploy via Vercel CLI or dashboard.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+Created with care to showcase the Rush The Line movement: **human + AI guidance for fearless airport navigation**.💫
