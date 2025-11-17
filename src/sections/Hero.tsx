@@ -54,7 +54,7 @@ export const Hero = () => {
                 <a href="#cta">Join the Waitlist</a>
               </Button>
               <Button asChild variant="ghost" size="lg">
-                <a href="#tech-growth">Watch Demo</a>
+                <a href="#cta">Send Message</a>
               </Button>
               <span className="text-sm text-[var(--color-text-tertiary)]">
                 Early access limited to select airports.
