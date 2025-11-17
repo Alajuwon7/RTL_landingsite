@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/shared/Button";
 import { GradientText } from "@/components/shared/GradientText";
 import { cn } from "@/lib/utils";
+import { useWaitlistModal } from "@/components/waitlist/WaitlistModalProvider";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -11,6 +12,8 @@ const fadeUp = {
 };
 
 export const Hero = () => {
+  const { openModal } = useWaitlistModal();
+
   return (
     <section
       id="hero"
@@ -50,8 +53,8 @@ export const Hero = () => {
               variants={fadeUp}
               className="mt-6 flex flex-wrap items-center gap-4"
             >
-              <Button asChild size="lg">
-                <a href="#cta">Join the Waitlist</a>
+              <Button size="lg" onClick={openModal}>
+                Join the Waitlist
               </Button>
               <Button asChild variant="ghost" size="lg">
                 <a href="#cta">Send Message</a>
