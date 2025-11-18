@@ -27,14 +27,13 @@ export const Footer = () => {
         <div className="mx-auto grid w-full max-w-[1280px] gap-12 px-[clamp(1rem,5vw,2rem)] md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="space-y-4">
             <Link href="#hero" className="flex items-center gap-3 text-white">
-              <div className="relative h-10 w-10 overflow-hidden rounded-2xl bg-[var(--gradient-primary)] shadow-[var(--shadow-glow-magenta)]">
-                <div className="absolute inset-1 flex flex-col justify-between p-1">
-                  {[0, 1, 2].map((line) => (
-                    <span key={line} className="h-[3px] rounded-full bg-white/80" style={{ width: `${100 - line * 25}%` }} />
-                  ))}
-                </div>
-              </div>
-              <span className="font-display text-xl font-semibold">Rush The Line</span>
+              <img
+                src="https://res.cloudinary.com/kingaat7/image/upload/v1731607772/R_Logo.png"
+                alt="Rush The Line logo"
+                className="h-12 w-auto object-contain"
+                width={150}
+                height={48}
+              />
             </Link>
             <p className="text-sm text-[var(--color-text-tertiary)]">
               Revolutionizing airport navigation with a human + AI movement platform that keeps travelers ahead of every moment.

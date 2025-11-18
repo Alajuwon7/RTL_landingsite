@@ -63,8 +63,12 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
             <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top,rgba(166,20,112,0.25),transparent_65%)] opacity-70" />
             <button
               type="button"
-              onClick={onClose}
-              className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/15"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onClose();
+              }}
+              className="absolute right-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/15"
               aria-label="Close waitlist form"
             >
               <X className="h-5 w-5" />

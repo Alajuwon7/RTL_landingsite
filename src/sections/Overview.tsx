@@ -45,7 +45,7 @@ export const Overview = () => {
             Moving You Smarter Through Every Step
           </h2>
           <p className="text-lg text-[var(--color-text-secondary)] md:text-xl">
-            Rush The Line helps travelers navigate busy airports with less stress and more confidence.
+            <b>Rush The Line</b> helps travelers navigate busy airports with less stress and more confidence.
             We blend real-time location data, crowdsourced insights, and personalized alerts to guide you through TSA lines, gate changes, food pickup, and more.
           </p>
           <Card variant="base" padding="lg" className="bg-white/5">

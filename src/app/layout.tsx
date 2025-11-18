@@ -9,21 +9,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rushtheline.com"),
   title: "Rush The Line — AI-Powered Airport Navigation",
   description:
-    "Navigate airports with confidence using Rush The Line. Real-time insights, AI guidance, and stress-free movement from curb to gate.",
+    "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
   openGraph: {
-    title: "Rush The Line — AI-Powered Airport Navigation",
-    description:
-      "Rush The Line helps travelers move smarter through busy airports with personalized alerts, live insights, and intelligent recommendations.",
+    type: "website",
+    url: "/",
     siteName: "Rush The Line",
+    title: "AI-Powered Airport Navigation",
+    description:
+      "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
+    images: [
+      {
+        url: "https://rushtheline.com/og/rtl-og-1200x630.png?v=1",
+        width: 1200,
+        height: 630,
+        alt: "Rush The Line preview: Human + AI guidance from curb to gate",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rush The Line — AI-Powered Airport Navigation",
+    title: "AI-Powered Airport Navigation",
     description:
-      "Experience stress-free airport navigation with Rush The Line's AI-powered guidance and real-time insights.",
+      "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
+    images: ["https://rushtheline.com/og/rtl-og-1200x630.png?v=1"],
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icons/apple-touch-icon.png",
+  },
+  themeColor: "#272830",
 };
 
 export default function RootLayout({
