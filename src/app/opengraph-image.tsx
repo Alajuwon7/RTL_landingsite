@@ -10,7 +10,7 @@ const headlineLines = [
 ];
 
 const brandGradient =
-  "linear-gradient(135deg, rgba(166, 20, 112, 0.95) 0%, rgba(226, 2, 26, 0.9) 45%, rgba(39, 40, 48, 1) 100%)";
+  "linear-gradient(140deg, #0b0b12 0%, #161624 55%, rgba(166, 20, 112, 0.9) 83%, rgba(226, 2, 26, 0.85) 100%)";
 
 export const size = {
   width: 1200,
@@ -86,7 +86,7 @@ export default function OpengraphImage() {
                 display: "flex",
                 flexDirection: "column",
                 fontSize: 64,
-                lineHeight: 1.1,
+                lineHeight: 1.3,
                 fontWeight: 700,
                 letterSpacing: -1,
               }}
@@ -108,7 +108,7 @@ export default function OpengraphImage() {
                 color: "rgba(255,255,255,0.85)",
               }}
             >
-              Human + AI movement OS for airports
+            The Future of Airport Navigation is Here
             </span>
           </div>
         </div>
