@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Rush The Line",
-    title: "Human +AI-Powered Airport Navigation",
+    title: "Human + AI-Powered Airport Navigation",
     description:
       "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
     images: [
@@ -28,13 +28,6 @@ export const metadata: Metadata = {
         alt: "Rush The Line preview: Human + AI guidance from curb to gate",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Human + AI-Powered Airport Navigation",
-    description:
-      "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
-    images: ["https://rushtheline.com/og/rtl-og-1200x630.png?v=1"],
   },
   icons: {
     icon: "/favicon.ico",

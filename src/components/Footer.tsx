@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Section } from "@/components/shared/Section";
-import { Mail, Linkedin, Twitter } from "lucide-react";
+import { Mail, Linkedin, Instagram } from "lucide-react";
 
 const footerLinks = [
   { label: "Features", href: "#features" },
@@ -15,8 +15,16 @@ const legalLinks = [
 ];
 
 const socials = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/rushtheline", icon: Linkedin },
-  { label: "Twitter", href: "https://twitter.com/rushtheline", icon: Twitter },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/rush-the-line/posts/",
+    icon: Linkedin,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/rushtheline/",
+    icon: Instagram,
+  },
   { label: "Email", href: "mailto:hello@rushtheline.com", icon: Mail },
 ];
 
