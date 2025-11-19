@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
     images: [
       {
-        url: "https://rushtheline.com/og/rtl-og-1200x630.png?v=1",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Rush The Line preview: Human + AI guidance from curb to gate",
@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/icons/apple-touch-icon.png",
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#272830",
 };
 
