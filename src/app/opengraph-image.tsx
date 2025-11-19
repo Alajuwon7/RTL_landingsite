@@ -3,6 +3,15 @@ import { ImageResponse } from "next/og";
 const logoUrl =
   "https://res.cloudinary.com/kingaat7/image/upload/v1731607772/R_Logo.png";
 
+const headlineLines = [
+  "Navigate every terminal",
+  "with live traveler powered",
+  "intelligence.",
+];
+
+const brandGradient =
+  "linear-gradient(135deg, rgba(166, 20, 112, 0.95) 0%, rgba(226, 2, 26, 0.9) 45%, rgba(39, 40, 48, 1) 100%)";
+
 export const size = {
   width: 1200,
   height: 630,
@@ -21,9 +30,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           gap: 32,
-          padding: "64px",
-          background:
-            "radial-gradient(circle at 20% 20%, #7c3aed 0%, #111122 55%)",
+          padding: "72px",
+          background: brandGradient,
           color: "#ffffff",
           fontFamily: "Inter, 'Helvetica Neue', Arial, sans-serif",
         }}
@@ -31,30 +39,31 @@ export default function OpengraphImage() {
         <div
           style={{
             display: "flex",
-            alignItems: "center",
-            gap: 24,
+            flexDirection: "column",
+            gap: 40,
+            maxWidth: 1000,
           }}
         >
-          <img
-            src={logoUrl}
-            width={140}
-            height={140}
-            style={{
-              borderRadius: 32,
-              background: "rgba(255,255,255,0.08)",
-              padding: 20,
-            }}
-          />
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              gap: 8,
+              alignItems: "center",
+              gap: 24,
             }}
           >
+            <img
+              src={logoUrl}
+              width={120}
+              height={120}
+              style={{
+                borderRadius: 32,
+                background: "rgba(255,255,255,0.12)",
+                padding: 18,
+              }}
+            />
             <span
               style={{
-                fontSize: 32,
+                fontSize: 30,
                 letterSpacing: 8,
                 textTransform: "uppercase",
                 color: "rgba(255,255,255,0.85)",
@@ -62,54 +71,46 @@ export default function OpengraphImage() {
             >
               Rush The Line
             </span>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 20,
+              maxWidth: 900,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                fontSize: 64,
+                lineHeight: 1.1,
+                fontWeight: 700,
+                letterSpacing: -1,
+              }}
+            >
+              {headlineLines.map((line) => (
+                <span
+                  key={line}
+                  style={{ display: "block", hyphens: "none" }}
+                >
+                  {line}
+                </span>
+              ))}
+            </div>
             <span
               style={{
-                fontSize: 44,
-                fontWeight: 600,
+                fontSize: 40,
+                lineHeight: 1.2,
+                fontWeight: 500,
+                color: "rgba(255,255,255,0.85)",
               }}
             >
               Human + AI movement OS for airports
             </span>
           </div>
-        </div>
-
-        <div
-          style={{
-            fontSize: 80,
-            lineHeight: 1.05,
-            fontWeight: 700,
-            maxWidth: 960,
-          }}
-        >
-          Navigate every terminal with live, traveler-powered intelligence.
-        </div>
-
-        <p
-          style={{
-            fontSize: 34,
-            lineHeight: 1.4,
-            margin: 0,
-            color: "rgba(255,255,255,0.9)",
-            maxWidth: 900,
-          }}
-        >
-          Beat airport delays with proactive guidance, community updates, and
-          smart alerts from curb to gate.
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            fontSize: 30,
-            paddingTop: 24,
-            borderTop: "1px solid rgba(255,255,255,0.25)",
-            color: "rgba(255,255,255,0.9)",
-          }}
-        >
-          <span>rushtheline.com</span>
-          <span>Move smarter. Every moment.</span>
         </div>
       </div>
     ),
