@@ -10,14 +10,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rushtheline.com"),
-  title: "Rush The Line — AI-Powered Airport Navigation",
+  title: "Rush The Line — Human + AI-Powered Airport Navigation",
   description:
     "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
   openGraph: {
     type: "website",
     url: "/",
     siteName: "Rush The Line",
-    title: "AI-Powered Airport Navigation",
+    title: "Human +AI-Powered Airport Navigation",
     description:
       "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI-Powered Airport Navigation",
+    title: "Human + AI-Powered Airport Navigation",
     description:
       "Beat airport delays with live guidance, traveler-powered updates, and smart alerts from curb to gate.",
     images: ["https://rushtheline.com/og/rtl-og-1200x630.png?v=1"],
@@ -50,6 +50,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7X8TXZ9ZGJ"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7X8TXZ9ZGJ');
+            `,
+          }}
+        ></script>
+      </head>
       <body className={`${inter.variable} antialiased`}>        
         <a className="skip-link" href="#main-content">
           Skip to main content
