@@ -9,8 +9,10 @@ const headlineLines = [
   "intelligence.",
 ];
 
-const brandGradient =
-  "linear-gradient(140deg, #0b0b12 0%, #161624 55%, rgba(8, 3, 6, 0.9) 83%, rgba(170, 4, 20, 0.85) 100%)";
+const heroBackground =
+  "linear-gradient(180deg,#000000 0%,rgba(33,34,42,0.95) 45%,rgba(26,27,35,1) 100%)";
+const heroAccent =
+  "radial-gradient(120% 90% at 50% 120%,rgba(226,2,26,0.5) 0%,rgba(166,20,112,0.2) 45%,rgba(26,27,35,0) 70%)";
 
 export const size = {
   width: 1200,
@@ -31,7 +33,9 @@ export default function OpengraphImage() {
           justifyContent: "space-between",
           gap: 32,
           padding: "72px",
-          background: brandGradient,
+          backgroundImage: `${heroBackground}, ${heroAccent}`,
+          backgroundColor: "#000000",
+          backgroundBlendMode: "normal",
           color: "#ffffff",
           fontFamily: "Inter, 'Helvetica Neue', Arial, sans-serif",
         }}
@@ -57,7 +61,6 @@ export default function OpengraphImage() {
               height={120}
               style={{
                 borderRadius: 32,
-                background: "rgba(255,255,255,0.12)",
                 padding: 18,
               }}
             />
@@ -67,6 +70,7 @@ export default function OpengraphImage() {
                 letterSpacing: 8,
                 textTransform: "uppercase",
                 color: "rgba(255,255,255,0.85)",
+                fontWeight: 700,
               }}
             >
               Rush The Line
