@@ -12,7 +12,7 @@ const headlineLines = [
 const heroBackground =
   "linear-gradient(180deg,#000000 0%,rgba(33,34,42,0.95) 45%,rgba(26,27,35,1) 100%)";
 const heroAccent =
-  "radial-gradient(120% 90% at 50% 120%,rgba(226, 2, 24, 0.74) 0%,rgba(183, 13, 58, 0.69) 45%,rgba(20, 20, 25, 0) 70%)";
+  "radial-gradient(120% 90% at 50% 120%,rgba(226, 2, 26, 0.9) 0%,rgba(192, 6, 32, 0.75) 38%,rgba(26,27,35,0) 70%)";
 
 export const size = {
   width: 1200,
