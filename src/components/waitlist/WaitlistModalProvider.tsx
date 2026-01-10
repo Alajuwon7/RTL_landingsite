@@ -90,26 +90,47 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
               </div>
 
               <form
-                action="https://rushtheline.us19.list-manage.com/subscribe/post?u=17006b36997a9efd38703b1f1&id=7e9cdb5ce0&f_id=00a8a9e7f0"
+                action="https://rushtheline.us19.list-manage.com/subscribe/post?u=17006b36997a9efd38703b1f1&id=7e9cdb5ce0&v_id=4992&f_id=00a8a9e7f0"
                 method="post"
                 target="_blank"
                 noValidate
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
                 className="relative z-10 grid gap-4"
               >
                 <div className="grid gap-4 md:grid-cols-2">
-                  <InputField name="FNAME" placeholder="First name" label="First name" required />
-                  <InputField name="LNAME" placeholder="Last name" label="Last name" required />
+                  <InputField
+                    id="mce-FNAME"
+                    name="FNAME"
+                    placeholder="First name"
+                    label="First name"
+                    required
+                  />
+                  <InputField
+                    id="mce-LNAME"
+                    name="LNAME"
+                    placeholder="Last name"
+                    label="Last name"
+                    required
+                  />
                 </div>
-                <InputField name="EMAIL" type="email" placeholder="Email" label="Email" required />
-                <InputField name="MMERGE5" placeholder="City" label="City" />
+                <InputField
+                  id="mce-EMAIL"
+                  name="EMAIL"
+                  type="email"
+                  placeholder="Email"
+                  label="Email"
+                  required
+                />
+                <InputField id="mce-MMERGE5" name="MMERGE5" placeholder="City" label="City" />
 
                 <div className="space-y-2">
-                  <label htmlFor="travel-window" className="text-sm font-semibold text-white">
-                    Traveling between now and February?
+                  <label htmlFor="mce-MMERGE4" className="text-sm font-semibold text-white">
+                    Do you plan to travel from Atlanta this year?
                   </label>
                   <div className="relative">
                     <select
-                      id="travel-window"
+                      id="mce-MMERGE4"
                       name="MMERGE4"
                       required
                       className="input-base w-full appearance-none pr-10 text-white"
@@ -122,6 +143,11 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
                       ▾
                     </span>
                   </div>
+                </div>
+
+                <div id="mce-responses" className="hidden">
+                  <div id="mce-error-response" className="response" />
+                  <div id="mce-success-response" className="response" />
                 </div>
 
                 <input type="hidden" name="tags" value="Waitlist,TravelersFeed,BetaNov-Feb" />
@@ -152,10 +178,15 @@ type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
 };
 
-const InputField = ({ label, className, ...props }: InputFieldProps) => (
+const InputField = ({ label, className, id, ...props }: InputFieldProps) => (
   <div className="space-y-2">
-    {label ? <label className="text-sm font-semibold text-white">{label}</label> : null}
+    {label ? (
+      <label className="text-sm font-semibold text-white" htmlFor={id}>
+        {label}
+      </label>
+    ) : null}
     <input
+      id={id}
       {...props}
       className={
         "input-base w-full border border-white/15 bg-white/5 text-white placeholder:text-white/40 focus:border-[var(--color-brand-magenta)] focus:ring-2 focus:ring-[rgba(166,20,112,0.35)] " +
