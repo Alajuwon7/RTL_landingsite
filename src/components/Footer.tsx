@@ -4,14 +4,13 @@ import { Mail, Linkedin, Instagram } from "lucide-react";
 
 const footerLinks = [
   { label: "Features", href: "#features" },
-  { label: "Tech Growth", href: "#tech-growth" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "About", href: "#overview" },
 ];
 
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
+  { label: "Terms of Service", href: "/privacy" },
 ];
 
 const socials = [
